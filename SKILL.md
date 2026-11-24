@@ -69,6 +69,18 @@ description: Use when a research task returns results from several literature da
 - 冲突消解采用固定确定性规则，只保证可复算，不代表字段真值优先级最优。
 - 语言、文献类型等字段若各库口径不同，仅做字符串级归一，不做语义映射。
 
+## Quickstart
+
+在仓库根目录 `bohrium-competition` 执行（PowerShell，实测通过）：
+
+```powershell
+python -B "tracks\literature-search\challenges\challenge-5c918ff0\06_code\submission\scripts\run_skill.py" --case "tracks\literature-search\challenges\challenge-5c918ff0\06_code\submission\examples\demo-case\case.json" --out "$env:TEMP\demo_5c918ff0\result.json" --work "$env:TEMP\demo_5c918ff0\work"
+```
+
+- 示例输入：`examples/demo-case/case.json`，合成且自包含（`"demo": true`，两条数据库各有返回、含一条跨库重复记录；所有 DOI 均为虚构的 `10.0000/...`）。
+- 实测输出：`status = "success"`、`merged = 3`，`result.json` 顶层含 `case_id`、`status`、`result`、`evidence`、`uncertainty`、`errors`、`stats`；同一输入两次运行结果逐字节一致。
+- 该用例只验证脚本可执行与输出契约齐全，不代表真实数据库覆盖情况。
+
 ## 最小调用示例（示例，非正式案例结果）
 
 ```bash
