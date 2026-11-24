@@ -1,0 +1,71 @@
+{
+  "demo": true,
+  "synthetic": true,
+  "case_id": "demo-5c918ff0-nlrp3-saki",
+  "note": "Synthetic, self-contained demo case. Records, DOIs (10.0000/...) and journal metadata are fabricated for testing only.",
+  "topic": "Federated record merging across two bibliographic databases for a review on NLRP3 and septic acute kidney injury",
+  "databases": [
+    {
+      "name": "crossref",
+      "query": "NLRP3 AND sepsis AND acute kidney injury",
+      "status": "ok",
+      "results": [
+        {
+          "title": "NLRP3 inflammasome activation in septic acute kidney injury",
+          "doi": "10.0000/demo.m1",
+          "year": 2019,
+          "authors": ["Li J", "Wang H"],
+          "journal": "Kidney International",
+          "volume": "96",
+          "pages": "101-112",
+          "abstract": "NLRP3 inflammasome activation was measured in tubular cells from patients with septic acute kidney injury."
+        },
+        {
+          "title": "Gasdermin D mediates tubular pyroptosis in sepsis",
+          "doi": "10.0000/demo.m2",
+          "year": 2021,
+          "authors": ["Chen X"],
+          "journal": "Journal of the American Society of Nephrology",
+          "volume": "32",
+          "pages": "2100-2114",
+          "abstract": "Gasdermin D cleavage drove pyroptotic death of tubular epithelial cells in murine sepsis."
+        }
+      ]
+    },
+    {
+      "name": "europepmc",
+      "query": "NLRP3 sepsis acute kidney injury",
+      "status": "ok",
+      "results": [
+        {
+          "title": "NLRP3 inflammasome activation in septic acute kidney injury.",
+          "doi": "10.0000/demo.m1",
+          "pmid": "31000001",
+          "year": 2019,
+          "authors": ["Li J"],
+          "journal": "Kidney Int",
+          "pages": "101-112",
+          "abstract": "NLRP3 inflammasome activation was measured in tubular cells from patients with septic acute kidney injury."
+        },
+        {
+          "title": "Urinary NLRP3 predicts septic acute kidney injury",
+          "doi": "10.0000/demo.m3",
+          "pmid": "33500002",
+          "year": 2023,
+          "authors": ["Zhao Y", "Sun L"],
+          "journal": "Critical Care",
+          "abstract": "Urinary NLRP3 concentrations predicted progression of septic acute kidney injury in a prospective cohort."
+        }
+      ]
+    }
+  ],
+  "output_contract": {
+    "case_id": "string",
+    "status": "string",
+    "result": "object",
+    "evidence": "array",
+    "uncertainty": "array",
+    "errors": "array",
+    "stats": "object"
+  }
+}
