@@ -5,6 +5,8 @@ description: Use when a research task returns results from several literature da
 
 # 多数据库联合检索与可回溯合并
 
+
+
 ## 用途与适用条件
 
 当一个科研问题需要同时查询多个学术数据库（Crossref、Europe PMC、Scopus、Web of Science、CNKI 等），而各库字段口径、论文标识符与返回结构不一致时使用。目标是把多份异构响应合并成一份**不重复、字段可用、逐条可回溯到来源库**的记录集，并明确说出哪些库/字段没有覆盖。
